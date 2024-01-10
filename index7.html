@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:none;
+        }
+
+        /* Style menu toggle (hamburger) */
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .bar {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* Style menu (sembunyikan secara default) */
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        .menu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .menu li {
+            margin: 15px 0;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100%;
+            background-color:orange;
+            position: fixed;
+            left: -250px;
+            top: 0;
+            transition: left 0.3s ease-in-out;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+    </style>
+</head>
+<center><h1 style="font-family: cursive;background: orange;padding: 10px;width: auto;height: auto;">KulinerKU</h1></center>
+
+
+
+<body>
+    <div class="menu-toggle"style="background: orange;padding: 10px;width: auto;height: auto;" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+<br/>
+    <!--List Menu-->
+    <nav class="sidebar" >
+        <div style="font-family: cursive;">List Menu : </div>
+        <br/><hr>
+        <ul style="align-items: center;">
+            <li><a href="index2.html"><button style="background:red; border-radius: 10px;height: 50px;width: 200px;color: white;font-size: 15px;font-family: cursive;"><i class="fas fa-utensils"></i>  Resep Aneka Makanan</button></a></li><hr><br/>
+            <li><a href="index4.html"><button style="background: red;border-radius: 10px;height: 50px;width: 200px;color: white;font-size: 15px; font-family: cursive;"><i class="fas fa-coffee"></i>  Resep Aneka Minuman</button></a></li><hr><br/>
+            <li><a href="index5.html"><button style="background: red;border-radius: 10px;height: 50px;width: 200px;color: white;font-family: cursive;font-size: 15px;"><i class="fas fa-birthday-cake"></i>  Resep Aneka Desert</button></a></li><hr><br/>
+            <li><a href="index8.html"><button style="background: red;border-radius: 10px;height: 50px;width: 200px;color: white;font-family: cursive;font-size: 15px;"><i class="fas fa-cookie-bite"></i>  Resep Aneka Kue Kering</button></a></li><hr><br/>
+            <li><a href="index7.html"><button style="background:red; border-radius: 10px;height: 50px;width: 200px;color: white;font-size: 15px;font-family: cursive;"><i class="fas fa-cookie-bite"></i>  Resep Aneka Kue Basah</button></a></li><hr><br/>
+            <li><a href="index3.html"><button style="background:red; border-radius: 10px;height: 50px;width: 200px;color: white;font-size: 15px;font-family: cursive;"><i class="fas fa-ice-cream"></i>  Resep Aneka Ice Cream</button></a></li><hr><br/>
+            <li><a href="index6.html"><button style="background:red; border-radius: 10px;height: 50px;width: 200px;color: white;font-size: 15px;font-family: cursive;"><i class="fas fa-birthday-cake"></i>  Resep Aneka Pudding</button></a></li><hr><br/>
+        </ul>
+    </nav>
+    
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active'); // Mengganti status menu (buka/tutup)
+        });
+    </script>
+
+    <!--ikon-->
+    <center>
+    <button style="background:orange;color: white;border-radius: 10px;width: auto;height: auto;padding: 10px;"><a href="index.html"><i class="fas fa-home" style="font-size:20px;"></i></a></button>
+    <button style="background:orange;color: white;border-radius: 10px;width: auto;height: auto;padding: 10px;"><a href="mailto:kucingdev975@gmail.com"><i class="fas fa-envelope" style="font-size: 20px;"></i></a></button>
+    <button style="background:orange;color:white;border-radius: 10px;width: auto;height: auto;padding: 10px;"><a href="https://github.com/Kucing-Dev"> <i class="fab fa-github" style="font-size: 20px;"></i></a></button>
+</center>
+<br/><br/>
+
+<!--gambar-->
+<h1  align="center"style="font-family: cursive;">Selamat datang di KulinerKU</h1>
+<p align="center"style="font-family: cursive;">"Kami Mengajak Anda Mengeksplorasi Ragam Resep di Kulinerku - Buat Setiap Saat Menjadi Istimewa dengan Masakan Anda Sendiri!"</p>
+<center>
+    <a href="kue basah1.html"><img src="resep6.1.jpg" style=" border-radius:50px ;height: 200px;width: 200px;"></a>
+    <a href="kue basah2.html"><img src="resep6.2.jpeg" style="border-radius: 50px;height: 200px;width: 200px;align-items: center;"></a>
+    <a href="kue basah3.html"><img src="resep6.3.jpeg" style="border-radius: 50px;height: 200px;width: 200px;align-items: right;"></a>
+    <a href="kue basah4.html"><img src="resep6.4.png" style="border-radius: 50px;height: 200px;width: 200px;"></a>
+    <a href="kue basah5.html"><img src="resep6.5.jpg" style="border-radius: 50px;height: 200px;width: 200px;align-items: center;"></a>
+    <a href="kue basah6.html"><img src="resep6.6.jpeg" style="border-radius: 50px;height: 200px;width: 200px;align-items: right;"></a>
+    <a href="kue basah7.html"><img src="resep6.7.jpg" style="border-radius: 50px;height: 200px;width: 200px;"></a>
+    <a href="kue basah8.html"><img src="resep6.8.jpg" style="border-radius: 50px;height: 200px;width: 200px;align-items: right;"></a>
+    <a href="kue basah9.html"><img src="resep6.9.jpeg" style="border-radius: 50px;height: 200px;width: 200px;"></a>
+    <a href="kue basah10.html"><img src="resep6.10.jpg" style="border-radius: 50px;height: 200px;width: 200px;align-items: right;"></a>
+    <a href="kue basah11.html"><img src="resep6.11.webp" style="border-radius: 50px;height: 200px;width: 200px;"></a> 
+    <a href="kue basah12.html"><img src="resep6.12.png" style="border-radius: 50px;height: 200px;width: 200px;"></a>
+</center>
+
+</body>
+</html>
